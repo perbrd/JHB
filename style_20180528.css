@@ -1,0 +1,210 @@
+*{
+box-sizing: border-box;
+padding:0;
+margin:0;
+}
+
+html, body{
+    height: 100%;
+    width:100%;
+
+
+}
+#backback{
+    line-height: 1.2em;
+    font-size: 8pt;
+    background: #d7dae4ff; /*snow*/
+    color: #3e3230ff; /*evergreen*/
+    display:grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-auto-rows: repeat(3, auto);
+    min-height: 100%;
+    min-width: 100%;
+    justify-items: center;
+    align-items: center;
+    border: 1px pink solid;
+    justify-self: stretch; /*options: (start, end, center, stretch)*/
+    grid-column: 1/4;
+    grid-row: 3;
+    z-index: -2;
+
+}
+
+#backback > div:nth-child(even) {
+        line-height: 1.0em;
+        color: #cc562fff; /*oranges*/
+        font-size: 25pt;
+    }
+
+.container{
+min-height: 100%;
+display:grid;
+grid-template-columns: 25% auto 25%;
+grid-auto-rows: minmax(20px,auto) minmax(20px,auto) auto;
+justify-items: stretch;
+align-items: stretch;
+/*  grid-column-gap: 1em;
+grid-row-gap: 1em;
+*/
+/*grid-gap: 1em;*/
+/*grid-auto-rows: minmax(100px, auto);*/
+}
+
+.container p:nth-child(odd)  {
+    background: #b2cbe3; /*sky blue*/
+    color: #3e3230ff; /*ever green*/
+	vertical-align: bottom;
+	width: 50%; /* 8.5" */
+	margin: 0 10% 0 10%; /*1st = top, 2nd = right, 3rd = bottom, 4th = left*/
+	margin-top: 40px; /*this removes the gap between two elements*/
+	padding: 2px;
+	border: 3px #3e3230ff solid; /*baseline border: 1st = top, 2nd = right, 3rd = bottom, 4th = right*/
+}
+
+.container > div{
+        padding: 1em;
+        /*background: #eee;*/
+        /*padding: 1em;*/
+        /*border: 1px black solid;*/
+        margin: 0;
+}
+
+.container > div:nth-child(odd) {
+    /*background: #ddd;*/
+    /*border: 1px black dashed;*/
+    /*height: 100%*/
+}
+
+.header{
+background: #616172ff; /*craggy gray*/
+color:#d7dae4ff; /*snow*/
+align-self: stretch; /*options: (start, end, center, stretch)*/
+justify-self: stretch; /*options: (start, end, center, stretch)*/
+align-items: end;
+grid-column: 1/4;
+grid-row: 1;
+font-size: 25px;
+text-align: center; /*options: (start, end, center, stretch)*/
+/*border: 1px black dashed;*/
+border-color: #3e3230ff; /*top right bottom left*/
+border-style: solid;
+border-width: 4px 0px 0px 0px; /*top right bottom left*/
+}
+
+.header h2{
+    padding: -20px;
+    margin:-7px;
+}
+
+.navbar{
+line-height: 0.8em;
+background: #616172ff; /*craggy gray*/
+color:#d7dae4ff; /*snow*/
+align-self: stretch; /*options: (start, end, center, stretch)*/
+justify-self: stretch; /*options: (start, end, center, stretch)*/
+grid-column: 1/4;
+grid-row: 2;
+text-align: center; /*options: (start, end, center, stretch)*/
+border-color: #3e3230ff; /*top right bottom left*/
+border-style: solid;
+border-width: 0px 0px 4px 0px; /*top right bottom left*/
+}
+
+.body{
+align-self: stretch; /*options: (start, end, center, stretch)*/
+justify-self: stretch; /*options: (start, end, center, stretch)*/
+grid-column: 1/4;
+grid-row: 3;
+}
+
+.recordings{
+    vertical-align: bottom;
+	width: 50%; /* 8.5" */
+	margin: 0 0% 0 0%; /*1st = top, 2nd = right, 3rd = bottom, 4th = left*/
+	margin-top: -1px; /*this removes the gap between two elements*/
+	padding: 0px;
+	border: 3px #616172ff solid; /*baseline border: 1st = top, 2nd = right, 3rd = bottom, 4th = right*/
+}
+
+audio {
+	vertical-align: bottom;
+	width: 50%; /* 8.5" */
+	margin: 0 10% 0 10%; /*1st = top, 2nd = right, 3rd = bottom, 4th = left*/
+	margin-top: -1px; /*this removes the gap between two elements*/
+	padding: 0px;
+	border: 3px #616172ff solid; /*baseline border: 1st = top, 2nd = right, 3rd = bottom, 4th = right*/
+}
+
+.body > div{
+    justify-self: center;
+    align-self: center;
+}
+
+#footwrapper{
+    position: absolute;
+    bottom: -50;
+    width:100%;
+}
+
+#footer{
+line-height: 4.0em;
+background: #616172ff; /*craggy gray*/
+color:#d7dae4ff; /*snow*/
+position: absolute;
+bottom: -5;
+width:100%;
+border-color: #3e3230ff; /*top right bottom left*/
+border-style: solid;
+border-width: 4px 0px 4px 0px; /*top right bottom left*/
+/*align-self: stretch; /*options: (start, end, center, stretch)*/
+/*justify-self: stretch; /*options: (start, end, center, stretch)*/
+/*grid-column: 1/4;*/
+/*grid-row: 3;*/
+/*border: 3px black solid; /*baseline border: 1st = top, 2nd = right, 3rd = bottom, 4th = right*/
+}
+
+#footer h2{
+    text-align: center; /*options: (start, end, center, stretch)*/
+    font-size: 14pt;
+}
+
+#foreback{
+            line-height: 1.5em;
+            position: absolute;
+            bottom: 0;
+            width:100%;
+        /* top: 100px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            */
+            font-size: 11pt;
+            color:black;
+            background: transparent;
+            display:grid;
+            min-height: 100%;
+            min-width: 100%;
+            grid-template-columns: repeat(5, 20%);
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            grid-auto-rows: repeat(7, auto);
+            justify-items: center;
+            align-items: end;
+            border: 2px pink solid;
+            align-self: stretch; /*options: (start, end, center, stretch)*/
+            justify-self: stretch; /*options: (start, end, center, stretch)*/
+            justify-items: stretch; /*start, center, end, stretch*/
+    /*     grid-column: 1/4;
+            grid-row: 3;
+            */
+            z-index:0;
+        }
+
+#foreback > div:nth-child(odd) {
+        line-height: 1em;
+            color: #6f87f5;
+            font-size: 14pt;
+            border: 2px black dashed;
+        }
